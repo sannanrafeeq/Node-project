@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box {
+  width: 400px;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box h1 {
+  text-align: center;
+  margin: 0 0 25px 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.signup-box input:focus {
+  outline: none;
+  border-color: #222;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  background: #444;
+}
+
+/* Responsive layout */
+img {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+/* Signup form on mobile */
+.signup-box {
+  width: min(400px, calc(100% - 32px));
+}
+
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 20px 0;
+  }
+
+  .signup-box {
+    padding: 24px 18px;
+  }
+
+  .signup-box h1 {
+    font-size: 26px;
+  }
+}
+
+/* SMT Designer footer */
+.smt-footer {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 24px 16px;
+  margin-top: 40px;
+}
+
+.smt-footer h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.smt-footer p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.smt-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.smt-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .smt-footer {
+    padding: 20px 12px;
+  }
+
+  .smt-footer h3 {
+    font-size: 20px;
+  }
+
+  .smt-footer p {
+    font-size: 14px;
+  }
+}
