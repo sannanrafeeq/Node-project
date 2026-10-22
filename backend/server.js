@@ -22,8 +22,13 @@ app.get("/", (req, res) => {
   res.send("E-commerce Backend is running!");
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+// On Vercel the exported app runs as a serverless function; only listen locally
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
