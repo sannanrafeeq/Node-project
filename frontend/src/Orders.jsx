@@ -1,3 +1,4 @@
+import { API_URL } from "./config";
 import { useEffect, useState } from "react";
 
 function Orders() {
@@ -9,7 +10,7 @@ function Orders() {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:3000/api/orders",
+          `${API_URL}/api/orders`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

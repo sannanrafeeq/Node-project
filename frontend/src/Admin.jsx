@@ -1,3 +1,4 @@
+import { API_URL } from "./config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,7 +19,7 @@ function Admin() {
   const fetchProducts = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/products"
+        `${API_URL}/api/products`
       );
 
       const data = await response.json();
@@ -58,8 +59,8 @@ function Admin() {
 
     try {
       const url = editingId
-        ? `http://localhost:3000/api/products/${editingId}`
-        : "http://localhost:3000/api/products";
+        ? `${API_URL}/api/products/${editingId}`
+        : `${API_URL}/api/products`;
 
       const method = editingId ? "PUT" : "POST";
 
@@ -115,7 +116,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/products/${id}`,
+        `${API_URL}/api/products/${id}`,
         {
           method: "DELETE",
           headers: {

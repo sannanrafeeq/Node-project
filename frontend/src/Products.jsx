@@ -1,3 +1,4 @@
+import { API_URL } from "./config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -6,7 +7,7 @@ function Products() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products")
+    fetch(`${API_URL}/api/products`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error(error));

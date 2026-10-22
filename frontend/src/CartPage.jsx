@@ -1,3 +1,4 @@
+import { API_URL } from "./config";
 import { useEffect, useState } from "react";
 console.log("Cart.jsx file loaded");
 const initialMeasurements = {
@@ -198,7 +199,7 @@ function Cart() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:3000/api/orders", {
+      const response = await fetch(`${API_URL}/api/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

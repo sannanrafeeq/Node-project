@@ -1,3 +1,4 @@
+import { API_URL } from "./config";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -10,7 +11,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
